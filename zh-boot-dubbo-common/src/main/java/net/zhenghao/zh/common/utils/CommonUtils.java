@@ -2,7 +2,7 @@ package net.zhenghao.zh.common.utils;
 
 import net.zhenghao.zh.common.constant.MsgConstant;
 import net.zhenghao.zh.common.constant.SystemConstant;
-import net.zhenghao.zh.common.entity.R;
+import net.zhenghao.zh.api.entity.R;
 
 /**
  * 通用工具类

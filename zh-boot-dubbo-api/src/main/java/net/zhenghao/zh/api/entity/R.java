@@ -1,4 +1,4 @@
-package net.zhenghao.zh.common.entity;
+package net.zhenghao.zh.api.entity;
 
 import java.util.HashMap;
 import java.util.Map;

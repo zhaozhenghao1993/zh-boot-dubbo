@@ -1,4 +1,4 @@
-package net.zhenghao.zh.common.entity;
+package net.zhenghao.zh.api.entity;
 
 import java.sql.Date;
 import java.util.HashMap;

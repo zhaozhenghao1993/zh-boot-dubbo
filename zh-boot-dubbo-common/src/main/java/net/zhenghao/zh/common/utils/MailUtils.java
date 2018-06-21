@@ -2,7 +2,7 @@ package net.zhenghao.zh.common.utils;
 
 
 
-import net.zhenghao.zh.common.entity.SysMailEntity;
+import net.zhenghao.zh.api.entity.SysMailEntity;
 
 import javax.mail.Session;
 import javax.mail.Transport;

@@ -1,9 +1,10 @@
-package net.zhenghao.zh.common.entity;
+package net.zhenghao.zh.api.entity;
+
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.ibatis.session.RowBounds;
 /**
  *Mybatis分页参数及查询结果封装,注意所有序号从1开始
  *
