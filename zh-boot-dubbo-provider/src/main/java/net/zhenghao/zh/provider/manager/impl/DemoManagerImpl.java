@@ -1,5 +1,6 @@
 package net.zhenghao.zh.provider.manager.impl;
 
+import com.github.pagehelper.PageHelper;
 import net.zhenghao.zh.api.entity.DubboDemo;
 import net.zhenghao.zh.provider.dao.DubboDemoMapper;
 import net.zhenghao.zh.provider.manager.DemoManager;
@@ -26,6 +27,7 @@ public class DemoManagerImpl implements DemoManager {
 
     @Override
     public List<DubboDemo> listDemo() {
+        PageHelper.startPage(1, 1);
         return dubboDemoMapper.listDemo();
     }
 }
