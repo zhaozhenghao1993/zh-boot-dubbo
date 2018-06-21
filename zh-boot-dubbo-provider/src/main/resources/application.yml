@@ -1,0 +1,40 @@
+server:
+  port: 9090
+  tomcat:
+    uri-encoding: utf-8
+    max-threads: 1000
+    min-spare-threads: 30
+#  servlet:
+#    context-path: /zh-boot-dubbo
+
+
+spring:
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: net.zhenghao.zh.api.entity
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+
+## Dubbo 服务提供者配置
+dubbo:
+  scan:
+    base-packages: net.zhenghao.zh.provider.service
+  application:
+    id: zh-dubbo-provider
+    name: zh-dubbo-provider
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  registry:
+    id: my-registry
+    address: N/A
