@@ -6,7 +6,7 @@ import net.zhenghao.zh.api.entity.DubboDemo;
 import java.util.List;
 
 /**
- * 系统日志
+ *
  *
  * @author:zhaozhenghao
  * @Email :736720794@qq.com

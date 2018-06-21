@@ -5,7 +5,9 @@ import com.alibaba.dubbo.config.annotation.Service;
 import net.zhenghao.zh.api.entity.DubboDemo;
 import net.zhenghao.zh.api.service.DemoService;
 import net.zhenghao.zh.provider.dao.DubboDemoMapper;
+import net.zhenghao.zh.provider.manager.DemoManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,10 +27,11 @@ import java.util.List;
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
 )
+@Transactional
 public class DefaultDemoService implements DemoService {
 
     @Autowired
-    private DubboDemoMapper dubboDemoMapper;
+    private DemoManager demoManager;
 
     @Override
     public String sayHello(String name) {
@@ -37,6 +40,6 @@ public class DefaultDemoService implements DemoService {
 
     @Override
     public List<DubboDemo> listDemo() {
-        return dubboDemoMapper.listDemo();
+        return demoManager.listDemo();
     }
 }
