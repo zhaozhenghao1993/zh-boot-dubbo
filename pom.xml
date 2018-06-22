@@ -6,6 +6,9 @@
     <groupId>net.zhenghao.zh</groupId>
     <artifactId>dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>dubbo</name>
+    <description>dubbo project for Spring Boot</description>
+
     <modules>
         <module>zh-boot-dubbo-provider</module>
         <module>zh-boot-dubbo-consumer</module>
@@ -14,8 +17,12 @@
     </modules>
     <packaging>pom</packaging>
 
-    <name>dubbo</name>
-    <description>dubbo project for Spring Boot</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

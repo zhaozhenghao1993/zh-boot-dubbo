@@ -8,9 +8,18 @@
     <artifactId>provider</artifactId>
     <groupId>net.zhenghao.zh</groupId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>provider</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+
+    <!--指定父模块，需要注意的是，这里要指定父模块pom.xml的相对路径-->
+    <parent>
+        <groupId>net.zhenghao.zh</groupId>
+        <artifactId>dubbo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,12 +60,7 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.7.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+
 
     <dependencies>
         <!-- Spring Boot dependencies -->
@@ -178,13 +182,23 @@
     </dependencies>
 
     <build>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--这里写上main方法所在类的路径-->
+                <configuration>
+                    <mainClass>net.zhenghao.zh.provider.ZhDubboProviderApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <finalName>provider</finalName>
     </build>
 </project>

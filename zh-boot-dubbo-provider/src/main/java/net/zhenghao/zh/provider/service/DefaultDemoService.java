@@ -4,7 +4,6 @@ package net.zhenghao.zh.provider.service;
 import com.alibaba.dubbo.config.annotation.Service;
 import net.zhenghao.zh.api.entity.DubboDemo;
 import net.zhenghao.zh.api.service.DemoService;
-import net.zhenghao.zh.provider.dao.DubboDemoMapper;
 import net.zhenghao.zh.provider.manager.DemoManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
