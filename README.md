@@ -16,7 +16,7 @@ jdk 版本 1.8
 注：目前发布的dubbo-spring-boot只支持springboot 1.x版本，等0.2.0发布后将springboot改为2.x
 
 
-#项目介绍
+# 项目介绍
 
 **zh-boot-dubbo-api**
 
