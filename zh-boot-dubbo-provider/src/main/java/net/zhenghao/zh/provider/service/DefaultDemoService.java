@@ -6,7 +6,6 @@ import net.zhenghao.zh.api.entity.DubboDemo;
 import net.zhenghao.zh.api.service.DemoService;
 import net.zhenghao.zh.provider.manager.DemoManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -22,7 +21,7 @@ import java.util.List;
  * DefaultDemoService.java
  */
 @Service(
-        version = "1.0.0",
+        version = "${demo.service.version}",
         application = "${dubbo.application.id}",
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
@@ -32,9 +31,6 @@ public class DefaultDemoService implements DemoService {
 
     @Autowired
     private DemoManager demoManager;
-
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     @Override
     public String sayHello(String name) {

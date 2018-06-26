@@ -6,8 +6,6 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.xml.PrettyPrintWriter;
 import com.thoughtworks.xstream.io.xml.XppDriver;
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.Writer;
 
@@ -22,8 +20,6 @@ import java.io.Writer;
  * XMLUtils.java
  */
 public class XMLUtils {
-
-    private static Logger LOGGER = LoggerFactory.getLogger(XMLUtils.class);
 
     /**
      * 扩展xstream，使其支持CDATA块

@@ -22,9 +22,9 @@ import java.util.List;
 @RestController
 public class DemoConsumerController {
 
-    @Reference(version = "1.0.0",
+    @Reference(version = "${demo.service.version}",
             application = "${dubbo.application.id}",
-            url = "dubbo://localhost:20880")
+            url = "dubbo://localhost:12345")
     private DemoService demoService;
 
     @RequestMapping("/sayHello")
