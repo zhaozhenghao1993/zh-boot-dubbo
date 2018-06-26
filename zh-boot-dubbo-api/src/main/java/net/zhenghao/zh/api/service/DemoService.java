@@ -18,4 +18,6 @@ public interface DemoService {
     String sayHello(String name);
 
     List<DubboDemo> listDemo();
+
+    String testRedis(String key, String value);
 }

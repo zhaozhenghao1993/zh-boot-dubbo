@@ -36,4 +36,9 @@ public class DemoConsumerController {
     public List<DubboDemo> listDemo() {
         return demoService.listDemo();
     }
+
+    @RequestMapping("/testRedis")
+    public String testRedis(@RequestParam String key, @RequestParam String value) {
+        return demoService.testRedis(key, value);
+    }
 }

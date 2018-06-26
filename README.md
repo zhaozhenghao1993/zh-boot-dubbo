@@ -11,6 +11,8 @@ jdk 版本 1.8
 
 数据库 mysql
 
+Nosql Redis RedisTemplate
+
 持久层 mybatis
 
 注：dubbo-spring-boot已推出0.2.0  支持springboot 2.0.x版本
