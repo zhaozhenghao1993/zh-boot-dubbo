@@ -13,7 +13,7 @@ jdk 版本 1.8
 
 持久层 mybatis
 
-注：dubbo-spring-boot以推出0.2.0  支持springboot 2.0.x版本
+注：dubbo-spring-boot已推出0.2.0  支持springboot 2.0.x版本
 
 
 # 项目介绍
